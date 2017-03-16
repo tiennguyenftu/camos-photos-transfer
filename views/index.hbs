@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Camos Photo Transfer</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row text-center">
+        <h1>Camos Photo Transfer</h1>
+        <form action="http://192.168.1.100:8080/api/dslr" method="post" id="photos" class="form form-inline" enctype="multipart/form-data">
+          <div class="form-control">
+            <input type="file" multiple="multiple" accept="image/*" name="photos" id="input">
+          </div>
+          <button class="btn btn-success" type="submit">Tải lên</button>
+        </form>
+      </div>
+    </div>
+
+  </body>
+
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+  <script src="/js/main.js"></script>
+  <script>if (window.module) module = window.module;</script>
+</html>

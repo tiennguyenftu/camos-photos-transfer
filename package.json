@@ -4,7 +4,8 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack-win": "electron-packager . camos-kiosk --asar --overwrite --platform=win32 --arch=x64 --icon=assets/app-icon/win/app.ico --prune=true --out=out --version-string.CompanyName='Camos, Inc.' --version-string.FileDescription='Camos Kiosk' --version-string.ProductName='Camos Kiosk'"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -17,6 +18,13 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^1.4.1"
+    "electron": "^1.4.1",
+    "electron-packager": "^8.5.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-hbs": "^1.0.4",
+    "multer": "^1.3.0"
   }
 }
