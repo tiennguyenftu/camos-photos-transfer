@@ -27,7 +27,7 @@ app.get('/', (req, res, next) => {
     res.render('index');
 });
 
-app.post('/api/dslr', upload.array('photos', 12), (req, res, next) => {
+app.post('/api/dslr', upload.array('photos', 30), (req, res, next) => {
     res.redirect('/');
 });
 
